@@ -1,102 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lost and Found</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: white;
-            color: black;
-            margin: 0;
-            padding: 40px 20px;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lost and Found</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: white;
+      color: black;
+      margin: 0;
+      padding: 40px 20px;
+      overflow-x: hidden;
+    }
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
+    /* Particle background */
+    .particles {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      background: radial-gradient(circle, rgba(0,0,0,0.03) 1px, transparent 1px);
+      background-size: 30px 30px;
+      animation: moveBg 20s linear infinite;
+    }
+    @keyframes moveBg {
+      from { background-position: 0 0; }
+      to { background-position: 100px 200px; }
+    }
 
-        .logo-container {
-            margin: 60px 0;
-        }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
 
-        .logo-placeholder {
-            width: 200px;
-            height: 200px;
-            background-color: #f5f5f5;
-            border: 2px dashed #ccc;
-            margin: 0 auto 20px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #666;
-            font-size: 14px;
-        }
+    .logo-container {
+      margin: 60px 0;
+    }
 
-        h1 {
-            font-size: 42px;
-            font-weight: 600;
-            margin: 0 0 40px 0;
-            color: black;
-        }
+    .logo {
+      width: 160px;
+      max-width: 80%;
+      height: auto;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .logo:hover {
+      transform: scale(1.05);
+    }
 
-        .content {
-            background-color: #f9f9f9;
-            padding: 40px;
-            border-radius: 8px;
-            margin: 40px 0;
-            text-align: left;
-        }
+    h1 {
+      font-size: 42px;
+      font-weight: 600;
+      margin: 0 0 40px 0;
+      color: black;
+    }
 
-        .content p {
-            font-size: 16px;
-            line-height: 1.6;
-            margin-bottom: 20px;
-            color: #333;
-        }
+    .content {
+      background-color: #f9f9f9;
+      padding: 40px;
+      border-radius: 8px;
+      margin: 40px 0;
+      text-align: left;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+    }
 
-        .highlight {
-            color: #ff6b35;
-            font-weight: 500;
-        }
+    .content p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      color: #333;
+    }
 
-        .apply-btn {
-            background-color: #ff6b35;
-            color: white;
-            padding: 12px 30px;
-            text-decoration: none;
-            font-weight: 500;
-            border-radius: 6px;
-            display: inline-block;
-            margin-top: 20px;
-        }
+    .highlight {
+      color: #ff6b35;
+      font-weight: 500;
+    }
 
-        .apply-btn:hover {
-            background-color: #e55a2b;
-        }
-    </style>
+    .apply-btn {
+      background-color: #ff6b35;
+      color: white;
+      padding: 12px 30px;
+      text-decoration: none;
+      font-weight: 500;
+      border-radius: 6px;
+      display: inline-block;
+      margin-top: 20px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(255, 107, 53, 0.3);
+    }
+    .apply-btn:hover {
+      background-color: #e55a2b;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(255, 107, 53, 0.4);
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="logo-container">
-            <h1>Lost and Found</h1>
-            <img src="photo_2025-09-13_16-54-44.jpg" alt="Lost and Found Logo" class="logo">
-        </div>
+  <!-- animated subtle particle background -->
+  <div class="particles"></div>
 
-        <div class="content">
-            <p><span class="highlight">$LNF</span> is the first true on-chain Lost and Found. Every time we hit a new milestone, holders get a shot at recovering what the market once took.</p>
-            
-            <p>For every <span class="highlight">$50K in market cap</span>, new holders are randomly selected for a chance to reclaim their lost SOL. Trading fees are distributed to those selected.</p>
-            
-            <div style="text-align: center;">
-                <a href="#apply" class="apply-btn">Apply for refund</a>
-            </div>
-        </div>
+  <div class="container">
+    <div class="logo-container">
+      <h1>Lost and Found</h1>
+      <img src="photo_2025-09-13_16-54-44.jpg" alt="Lost and Found Logo" class="logo">
     </div>
+
+    <div class="content">
+      <p><span class="highlight">$LNF</span> is the first true on-chain Lost and Found. Every time we hit a new milestone, holders get a shot at recovering what the market once took.</p>
+      
+      <p>For every <span class="highlight">$50K in market cap</span>, new holders are randomly selected for a chance to reclaim their lost SOL. Trading fees are distributed to those selected.</p>
+      
+      <div style="text-align: center;">
+        <a href="#apply" class="apply-btn">Apply for refund</a>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
