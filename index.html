@@ -309,6 +309,31 @@
         left: 50%;
         transform: translateX(-50%);
       }
+
+      .how-it-works-section {
+        margin: 25px 15px;
+        padding: 18px;
+      }
+
+      .how-it-works-header {
+        font-size: 2em;
+        margin-bottom: 25px;
+      }
+
+      .steps-container {
+        flex-direction: column;
+        gap: 25px;
+      }
+
+      .step-number {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3em;
+      }
+
+      .step-text {
+        font-size: 0.95em;
+      }
     }
     
     /* Extra small mobile screens */
@@ -354,6 +379,84 @@
         width: 60px;
         height: 60px;
       }
+
+      .how-it-works-section {
+        margin: 30px 10px;
+        padding: 20px;
+      }
+
+      .how-it-works-header {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+      }
+
+      .steps-container {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .step-number {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2em;
+      }
+
+      .step-text {
+        font-size: 0.9em;
+      }
+    }
+
+    /* How it works section */
+    .how-it-works-section {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 30px;
+      background-color: rgba(224, 247, 255, 0.95);
+      border-radius: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      font-family: 'Luckiest Guy', cursive;
+    }
+
+    .how-it-works-header {
+      font-size: 2.5em;
+      font-weight: bold;
+      color: #222;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .steps-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      align-items: flex-start;
+    }
+
+    .step {
+      flex: 1;
+      text-align: center;
+      position: relative;
+    }
+
+    .step-number {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #0077cc;
+      color: white;
+      font-size: 1.5em;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px auto;
+      border: 3px solid black;
+    }
+
+    .step-text {
+      font-size: 1em;
+      color: #222;
+      line-height: 1.4em;
     }
 
     /* Tablet adjustments */
@@ -369,6 +472,15 @@
       
       .page-title {
         font-size: 2.8em;
+      }
+
+      .how-it-works-section {
+        margin: 40px 20px;
+        padding: 25px;
+      }
+
+      .how-it-works-header {
+        font-size: 2.2em;
       }
     }
   </style>
@@ -395,7 +507,7 @@
   <div class="page-title">$LNF - Lost and Found</div>
 
   <!-- Logo -->
-  <img src="photo_2025-09-13_16-54-44.jpg" alt="$LNF Logo" class="logo">
+  <img src="photo_2025-09-13_16-54-44.png" alt="$LNF Logo" class="logo">
 
   <!-- Button under logo -->
   <a href="#" target="_blank" class="external-btn">Find what you lost</a>
@@ -410,6 +522,25 @@
   <div class="social-buttons">
     <a href="#" target="_blank"><img src="xlogo.png" alt="X Profile" class="x-logo"></a>
     <a href="#" target="_blank"><img src="telegramlogo.png" alt="Telegram Group" class="telegram-logo"></a>
+  </div>
+
+  <!-- How it works section -->
+  <div class="how-it-works-section">
+    <div class="how-it-works-header">How It Works</div>
+    <div class="steps-container">
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-text">The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</div>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-text">The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</div>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-text">The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</div>
+      </div>
+    </div>
   </div>
 </body>
 </html>
