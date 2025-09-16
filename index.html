@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>$LNF - Lost and Found</title>
   <!-- Google Font: Luckiest Guy -->
   <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
@@ -217,24 +218,157 @@
       animation: vibrate-left 0.8s infinite;
     }
 
-    /* Responsive adjustments */
-    @media (max-width: 900px) {
-      .text-bubble, .social-buttons {
+    /* Enhanced Mobile Responsive Design */
+    @media (max-width: 768px) {
+      /* Adjust top banner for mobile */
+      .top-banner {
+        height: 70px;
+      }
+      
+      .scrolling-text {
+        font-size: 1.4em;
+      }
+      
+      /* Mobile title adjustments */
+      .page-title {
+        font-size: 2.2em;
+        margin: 15px 10px;
+        padding: 0 10px;
+      }
+      
+      /* Logo sizing for mobile */
+      .logo {
+        width: 280px;
+        max-width: 90vw;
+      }
+      
+      /* Button adjustments */
+      .external-btn {
+        padding: 12px 25px;
+        font-size: 1.1em;
+        margin: 15px auto;
+      }
+      
+      /* Mobile layout restructuring */
+      .text-bubble {
         position: relative;
         top: auto;
         left: auto;
-        right: auto;
         margin: 20px auto;
-      }
-      .social-buttons {
-        flex-direction: row;
-        justify-content: center;
-        gap: 15px;
+        max-width: calc(100% - 40px);
+        width: auto;
+        font-size: 1.1em;
+        padding: 15px;
       }
       
+      .social-buttons {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin: 30px auto;
+        flex-direction: row;
+        justify-content: center;
+        gap: 30px;
+      }
+      
+      .social-buttons a img {
+        width: 60px;
+        height: 60px;
+      }
+      
+      /* Background logos adjustment for mobile */
       .spinning-logo {
         width: 80px;
         height: 80px;
+        opacity: 0.1;
+      }
+      
+      /* Repositioning background logos for better mobile layout */
+      .spinning-logo:nth-child(1) {
+        top: 5%;
+        left: 5%;
+      }
+      
+      .spinning-logo:nth-child(2) {
+        top: 15%;
+        right: 5%;
+      }
+      
+      .spinning-logo:nth-child(3) {
+        top: 75%;
+        left: 5%;
+      }
+      
+      .spinning-logo:nth-child(4) {
+        bottom: 10%;
+        right: 10%;
+      }
+      
+      .spinning-logo:nth-child(5) {
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    
+    /* Extra small mobile screens */
+    @media (max-width: 480px) {
+      .page-title {
+        font-size: 1.8em;
+        margin: 10px 5px;
+      }
+      
+      .logo {
+        width: 240px;
+      }
+      
+      .external-btn {
+        padding: 10px 20px;
+        font-size: 1em;
+      }
+      
+      .text-bubble {
+        font-size: 1em;
+        padding: 12px;
+        margin: 15px 10px;
+      }
+      
+      .social-buttons {
+        gap: 20px;
+      }
+      
+      .social-buttons a img {
+        width: 50px;
+        height: 50px;
+      }
+      
+      .scrolling-text {
+        font-size: 1.2em;
+      }
+      
+      .top-banner {
+        height: 60px;
+      }
+      
+      .spinning-logo {
+        width: 60px;
+        height: 60px;
+      }
+    }
+
+    /* Tablet adjustments */
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .text-bubble {
+        max-width: 280px;
+        font-size: 1.2em;
+      }
+      
+      .logo {
+        width: 350px;
+      }
+      
+      .page-title {
+        font-size: 2.8em;
       }
     }
   </style>
